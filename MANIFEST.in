@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include humman_resource *.css
+recursive-include humman_resource *.csv
+recursive-include humman_resource *.html
+recursive-include humman_resource *.ico
+recursive-include humman_resource *.js
+recursive-include humman_resource *.json
+recursive-include humman_resource *.md
+recursive-include humman_resource *.png
+recursive-include humman_resource *.py
+recursive-include humman_resource *.svg
+recursive-include humman_resource *.txt
+recursive-exclude humman_resource *.pyc
