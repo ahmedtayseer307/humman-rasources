@@ -16,7 +16,9 @@
   "to_date",
   "total_leave_days",
   "alternative_employee",
-  "reason"
+  "alternative_employee_name",
+  "reason",
+  "amended_from"
  ],
  "fields": [
   {
@@ -83,11 +85,27 @@
    "fieldname": "reason",
    "fieldtype": "Small Text",
    "label": "Reason"
+  },
+  {
+   "fetch_from": "alternative_employee.full_name",
+   "fieldname": "alternative_employee_name",
+   "fieldtype": "Data",
+   "label": "Alternative Employee Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Leave Application",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-01-21 16:56:26.269020",
+ "modified": "2023-02-01 16:27:24.040746",
  "modified_by": "Administrator",
  "module": "Humman Resource",
  "name": "Leave Application",

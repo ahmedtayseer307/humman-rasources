@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-01-21 16:38:31.117187",
+ "creation": "2023-01-28 15:39:56.773631",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -25,13 +25,16 @@
    "fetch_from": "employee.full_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
-   "label": "Employee Name"
+   "label": "Employee Name",
+   "read_only": 1
   },
   {
+   "fetch_from": "employee.department",
    "fieldname": "department",
    "fieldtype": "Link",
    "label": "Department",
-   "options": "Department"
+   "options": "Department",
+   "read_only": 1
   },
   {
    "fieldname": "leave_type",
@@ -57,10 +60,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-21 17:30:05.082429",
+ "modified": "2023-01-28 16:12:52.206654",
  "modified_by": "Administrator",
  "module": "Humman Resource",
- "name": "Leave Allocation",
+ "name": "leave Allocation",
  "owner": "Administrator",
  "permissions": [
   {

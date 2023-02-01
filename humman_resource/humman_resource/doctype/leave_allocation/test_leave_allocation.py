@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestLeaveAllocation(unittest.TestCase):
+class TestleaveAllocation(unittest.TestCase):
 	pass

@@ -15,7 +15,7 @@ frappe.ui.form.on("Employee", "validate", function(frm) {
 });
 
 frappe.ui.form.on("Employee", "validate", function(frm) {
-        if (frm.doc.status === "Active") {
+        if (frm.doc.status === "Active" && frm.doc.age >= 60) {
             frappe.throw("Cannot save employee with active status ");
         }
     });
@@ -35,6 +35,6 @@ frappe.ui.form.on('Employee',{
         frm.doc.count_education = total_education; 
 
       }
-   
+
    }
     });
