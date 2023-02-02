@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-02 12:10:08.166657",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "start_time",
+  "end_time",
+  "working_hours_threshold_for_absent",
+  "late_entry_grace_period",
+  "early_exit_grace_period"
+ ],
+ "fields": [
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "description": "Working hours below which Absent is marked. (Zero to disable)",
+   "fieldname": "working_hours_threshold_for_absent",
+   "fieldtype": "Float",
+   "label": "Working Hours Threshold for Absent"
+  },
+  {
+   "description": "The time after the shift start time when check-in is considered as late (in minutes).",
+   "fieldname": "late_entry_grace_period",
+   "fieldtype": "Float",
+   "label": "Late Entry Grace Period"
+  },
+  {
+   "description": "The time before the shift end time when check-out is considered as early (in minutes)",
+   "fieldname": "early_exit_grace_period",
+   "fieldtype": "Float",
+   "label": "Early Exit Grace Period"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-02-02 12:10:08.166657",
+ "modified_by": "Administrator",
+ "module": "Humman Resource",
+ "name": "Attendance Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
