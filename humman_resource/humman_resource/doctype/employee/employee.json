@@ -19,7 +19,8 @@
   "department",
   "employee_education",
   "age",
-  "count_education"
+  "count_education",
+  "user"
  ],
  "fields": [
   {
@@ -97,11 +98,17 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Count education"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-28 15:18:54.751783",
+ "modified": "2023-02-04 12:39:21.886544",
  "modified_by": "Administrator",
  "module": "Humman Resource",
  "name": "Employee",
