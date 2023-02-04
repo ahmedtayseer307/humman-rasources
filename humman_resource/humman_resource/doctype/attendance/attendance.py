@@ -36,7 +36,7 @@ class Attendance(Document):
             # late come
             late_come_in_hours = start_time.hour - check_in.hour
             late_in_minutes = start_time.minute - check_in.minute + late_entry_grace_period_in_minits
-            late_entry = late_come_in_hours - (-late_in_minutes / 60)
+            late_entry = late_come_in_hours + (late_in_minutes / 60)
             if late_entry > 0:
                 late_entry = 0
 
