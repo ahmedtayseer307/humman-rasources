@@ -14,7 +14,8 @@
   "check_in",
   "check_out",
   "work_hours",
-  "late_hours"
+  "late_hours",
+  "amended_from"
  ],
  "fields": [
   {
@@ -73,11 +74,21 @@
    "fieldtype": "Float",
    "label": "Late Hours",
    "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Attendance",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-02-02 15:48:28.086697",
+ "modified": "2023-02-04 15:49:18.264322",
  "modified_by": "Administrator",
  "module": "Humman Resource",
  "name": "Attendance",

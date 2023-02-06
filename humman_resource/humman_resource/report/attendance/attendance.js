@@ -5,15 +5,15 @@
 frappe.query_reports["Attendance"] = {
 	"filters": [
 		{
-            fieldname: 'Employee',
-            label: __('Employee'),
-            fieldtype: 'Link',
-            options: 'Employee',
+            "fieldname": 'Employee',
+            "label": __('Employee'),
+            "fieldtype": 'Link',
+            "options": 'Employee',
         },
 		{
-            fieldname: 'attendance_date',
-            label: __('Attendance Date'),
-            fieldtype: 'Date',
+            "fieldname": 'attendance_date',
+            "label": __('Attendance Date'),
+            "fieldtype": 'Date',
         }
 	]
 };

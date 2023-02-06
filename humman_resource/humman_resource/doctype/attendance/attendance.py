@@ -7,7 +7,7 @@ from frappe.model.document import Document
 
 
 class Attendance(Document):
-    def validate(self):
+    def on_submit(self):
         self.get_hours_work()
         self.update_status_value_in_attendance()
 
@@ -50,7 +50,6 @@ class Attendance(Document):
             self.late_hours = -(late_entry + early_leave)
             self.work_hours = 8 - self.late_hours
 
-
     def update_status_value_in_attendance(self):
         working_hours_threshold_for_absent = \
             frappe.db.get_single_value('Attendance Settings', 'working_hours_threshold_for_absent')
@@ -58,3 +57,16 @@ class Attendance(Document):
             self.status = "Absent"
         else:
             self.status = "Present"
+
+@frappe.whitelist()
+def create_attendance(attendance_date, check_in, check_out):
+    if not attendance_date or not check_in or not check_out:
+        frappe.throw("Attendance Date, Check In, and Check Out are required")
+
+    new_attendance = frappe.new_doc("Attendance")
+    new_attendance.employee = frappe.get_doc("Employee", {"user": frappe.session.user}).name
+    new_attendance.attendance_date = attendance_date
+    new_attendance.check_in = check_in
+    new_attendance.check_out = check_out
+    new_attendance.insert()
+    return {"message": "Attendance created successfully"}
